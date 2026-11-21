@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Productivity and Study Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="logo" href="#">StudyPlanner</a>
+            <a class="nav-link" href="#dashboard">Dashboard</a>
+            <a class="nav-link" href="#tasks">My Tasks</a>
+        </nav>
+    </header>
+
+    <main class="container" id="dashboard">
+        <section class="welcome">
+            <p class="eyebrow">YOUR ACADEMIC COMPANION</p>
+            <h1>Plan your studies. Achieve your goals.</h1>
+            <p>Organize your academic tasks and track your progress.</p>
+        </section>
+
+        
+<section class="statistics" aria-label="Study statistics">
+
+    <article class="stat-card">
+        <span>Total Tasks</span>
+        <strong id="total-count">0</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Pending Tasks</span>
+        <strong id="pending-count">0</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Completed Tasks</span>
+        <strong id="completed-count">0</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Progress</span>
+        <strong id="progress-percent">0%</strong>
+    </article>
+
+</section>
+
+
+        <section class="panel" id="add-task">
+            <h2>Add a Study Task</h2>
+
+            <form id="task-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="task-title">Task name</label>
+                        <input
+                            id="task-title"
+                            type="text"
+                            placeholder="e.g. Revise JavaScript"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="task-subject">Subject</label>
+                        <select id="task-subject" required>
+                            <option value="">Choose a subject</option>
+                            <option>Web Technologies</option>
+                            <option>Mathematics</option>
+                            <option>Programming</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="task-deadline">Deadline</label>
+                        <input id="task-deadline" type="date" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="task-priority">Priority</label>
+                        <select id="task-priority" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="task-minutes">Estimated minutes</label>
+                        <input
+                            id="task-minutes"
+                            type="number"
+                            min="1"
+                            step="1"
+                            placeholder="30"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button class="primary-button" type="submit">+ Add Task</button>
+                <p id="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel" id="tasks">
+            <div class="section-heading">
+                <div>
+                    <h2>My Study Tasks</h2>
+                    <p>Keep track of what you need to accomplish.</p>
+                </div>
+
+                <label for="task-filter">Filter</label>
+                <select id="task-filter">
+                    <option value="all">All tasks</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <p id="empty-message">No tasks yet. Add your first task above.</p>
+            <div id="task-list" class="task-list"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Student Productivity and Study Planner | CSS201</p>
+        <p>Developed by ANUSHKA and her project team</p>
+    </footer>
+</body>
+</html>
+
+

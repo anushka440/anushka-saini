@@ -1,0 +1,233 @@
+
+/* 1. Basic page settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #243047;
+    background: #f4f6fc;
+    line-height: 1.6;
+}
+
+/* 2. Navigation bar */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #dfe4ef;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #3157d5;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #344054;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    background: #e9edff;
+    color: #3157d5;
+}
+
+/* 3. Main content */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.welcome {
+    padding: 25px 0;
+}
+
+.welcome h1 {
+    max-width: 750px;
+    margin: 5px 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+}
+
+.eyebrow {
+    color: #3157d5;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 4. Statistics cards */
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.stat-card span {
+    display: block;
+    color: #667085;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 8px;
+    color: #3157d5;
+    font-size: 2rem;
+}
+
+/* 5. Form layout */
+.panel {
+    margin: 25px 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.field input,
+.field select,
+#task-filter {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd3e1;
+    border-radius: 8px;
+    background: #ffffff;
+    font: inherit;
+}
+
+.field input:focus,
+.field select:focus,
+#task-filter:focus {
+    outline: 3px solid #dce4ff;
+    border-color: #3157d5;
+}
+
+.primary-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #3157d5;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #213b9c;
+}
+
+/* 6. Task section */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+#task-list {
+    display: grid;
+    gap: 14px;
+}
+
+.task-card {
+    padding: 18px;
+    border: 1px solid #dfe4ef;
+    border-radius: 12px;
+    background: white;
+}
+
+.task-card.completed {
+    background: #edf8f2;
+    border-color: #a9d8bc;
+}
+
+.task-card.completed h3 {
+    color: #18864b;
+    text-decoration: line-through;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.task-actions button {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-button {
+    background: #e2f5e9;
+    color: #176b3b;
+}
+
+.delete-button {
+    background: #fdeaea;
+    color: #a52222;
+}
+
+#form-message {
+    color: #b42318;
+}
+
+#empty-message {
+    padding: 22px;
+    border: 2px dashed #dfe4ef;
+    border-radius: 10px;
+    color: #667085;
+    text-align: center;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #667085;
+}
+
+/* 7. Mobile responsive layout */
+@media (max-width: 800px) {
+    .statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 450px) {
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+}
+
